@@ -1,46 +1,38 @@
-# Empirical Comparative Study of Generative Models & MLP Classifier Evaluation
+# Deep Learning Assignment: Generative Models & Classifier Study
 
-This repository contains the PyTorch implementation for the Deep Learning Take-Home Assignment Session 07. The project focuses on a full-scale empirical comparative study of generative model architectures and classification evaluation using the Fashion-MNIST dataset.
+This repository provides a complete PyTorch implementation and empirical evaluation framework for comparative analysis of deep generative models and baseline classifiers on the Fashion-MNIST dataset.
 
-## Implemented Models
-- MLP Classifier (Baseline & Information Bottleneck Analysis)
-- Vanilla Autoencoder (AE)
-- Sparse Autoencoder with L1 Sparsity Penalty
-- Variational Autoencoder (VAE)
-- Vanilla Generative Adversarial Network (GAN)
-- Deep Convolutional GAN (DCGAN)
-- Denoising Diffusion Probabilistic Models (DDPM - Light U-Net)
+## Project Scope
+The study investigates seven distinct neural network architectures to understand representation learning, reconstruction capabilities, generative synthesis, and information bottlenecks:
+- **Baseline Classifier**: Multi-Layer Perceptron (MLP) analyzing information bottleneck properties.
+- **Autoencoders**: Vanilla Autoencoder (AE) and Sparse Autoencoder (L1 penalty).
+- **Probabilistic Generative Models**: Variational Autoencoder (VAE) and Denoising Diffusion Probabilistic Models (DDPM with Light U-Net).
+- **Adversarial Models**: Vanilla GAN and Deep Convolutional GAN (DCGAN).
 
-## Evaluation Metrics
-- **Reconstruction Fidelity**: Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index (SSIM).
-- **Generative Quality**: Fréchet Inception Distance (FID) Score.
-- **Performance/Efficiency**: Training time per epoch, Inference Latency per batch.
+## Evaluation Framework
+- **Fidelity Metrics**: Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM).
+- **Generative Performance**: Fréchet Inception Distance (FID).
+- **Computational Efficiency**: Epoch training duration and batch inference latency.
 
-## Prerequisites
-Ensure you have Python 3.8+ installed. A GPU is highly recommended (e.g., NVIDIA T4 on Google Colab) to accelerate the training and inference processes.
+## Getting Started
 
-## Installation and Execution
-Clone this repository:
+### Prerequisites
+- Python 3.8 or higher
+- PyTorch and TorchVision (GPU execution with CUDA recommended)
+
+### Installation
+Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/Rafns/Tugas07_GenerativeModels_2802493714.git
 cd Tugas07_GenerativeModels_2802493714
-```
-
-Install the required dependencies:
-```bash
 pip install -r requirements.txt
 ```
 
-Running the Experiment:
-1. Open the `TUGAS_DL_SESI07.ipynb` file using Jupyter Notebook, Jupyter Lab, or Google Colab.
-2. Run all cells sequentially.
+### Execution
+Open and run `TUGAS_DL_SESI07.ipynb` sequentially using Jupyter Notebook or Google Colab.
 
-## Highlights
-- **Generative Trilemma Verified**: Empirical results demonstrate trade-offs between sampling speed, sample quality, and mode coverage across models like VAE, DCGAN, and DDPM.
-- **Information Bottleneck**: Empirical analysis showing how classification models compress input space and discard features necessary for reconstruction or generation.
-
-## Repository Structure
-- `TUGAS_DL_SESI07.ipynb`: The main experiment script (Data Loading, Training, Evaluation, Visualizations).
-- `TUGAS_DL_SESI07_2802493714_Rafael_Nandana_S.pdf`: The comprehensive final analysis report.
-- `requirements.txt`: List of required Python libraries.
-- `README.md`: Project documentation.
+## Repository Contents
+- `TUGAS_DL_SESI07.ipynb`: Core experimental code, training loops, and visualizations.
+- `TUGAS_DL_SESI07_2802493714_Rafael_Nandana_S.pdf`: Detailed analytical report.
+- `requirements.txt`: Python package requirements.
+- `README.md`: Documentation.
